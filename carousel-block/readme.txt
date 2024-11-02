@@ -5,7 +5,7 @@ Tags: carousel, slide, gutenberg, slideshow, slider
 Requires at least: 6.1
 Tested up to: 6.6.2
 Requires PHP: 7.0
-Stable tag: 1.0.15
+Stable tag: 1.0.16
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -132,3 +132,6 @@ Update CSS for image block centering.
 
 = 1.0.15 = 
 Button block appender fix.
+
+= 1.0.16 = 
+Fix slider init.
