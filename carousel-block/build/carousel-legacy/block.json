@@ -1,16 +1,16 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 3,
-  "name": "cb/carousel-v2",
+  "name": "cb/carousel",
   "version": "1.0.0",
-  "title": "Carousel Slider v2",
+  "title": "Carousel Slider",
   "category": "design",
   "description": "Display a carousel with any blocks in the slides.",
   "attributes": {
     "slides": {
       "type": "number"
     },
-    "slidesPerView": {
+    "slidesToShow": {
       "type": "number",
       "default": 3
     },
@@ -18,13 +18,9 @@
       "type": "boolean",
       "default": false
     },
-    "slidesPerGroup": {
+    "slidesToScroll": {
       "type": "number",
       "default": 1
-    },
-    "spaceBetween": {
-      "type": "number",
-      "default": 15
     },
     "speed": {
       "type": "number",
@@ -33,11 +29,11 @@
     "slidePadding": {
       "type": "boolean"
     },
-    "navigation": {
+    "arrows": {
       "type": "boolean",
       "default": true
     },
-    "pagination": {
+    "dots": {
       "type": "boolean",
       "default": true
     },
@@ -49,30 +45,24 @@
       "type": "number",
       "default": 3000
     },
-    "loop": {
+    "infinite": {
       "type": "boolean",
       "default": false
     },
     "rtl": {
       "type": "boolean"
     },
-    "breakpoints": {
-      "type": "array",
-      "default": [
-        {
-          "width": 768,
-          "slidesPerView": 1,
-          "slidesPerGroup": 1
-        }
-      ]
-    },
-    "navigationSize": {
+    "responsiveWidth": {
       "type": "number",
-      "default": 22
+      "default": 768
     },
-    "navigationColor": {
-      "type": "string",
-      "default": "#000"
+    "responsiveSlides": {
+      "type": "number",
+      "default": 1
+    },
+    "responsiveSlidesToScroll": {
+      "type": "number",
+      "default": 1
     }
   },
   "supports": {
@@ -86,6 +76,5 @@
   "textdomain": "carousel-block",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
-  "viewScript": "file:./view.js",
   "style": "file:./style-index.css"
 }
