@@ -5,7 +5,7 @@ Tags: carousel, slide, gutenberg, swiper
 Requires at least: 6.1
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 2.0.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 A responsive carousel slider for the Gutenberg editor that supports adding any blocks to slides.
 
-**Carousel Slider Version 2 is here!** Now powered by **Swiper.js** for a smoother, more modern experience.
+🚀 **Carousel Slider Version 2 is here!** Now powered by **Swiper.js** for a smoother, faster, and more modern experience. See below for update instructions.
 
 = Features =
 
@@ -50,19 +50,19 @@ To remove a slide, select the slide and click the three dots right above it. Cli
 
 Click the Carousel Block (the block nesting all the slides) to show the carousel settings.
 
-== Carousel Slider v2 ==
+== Carousel Slider Version 2 ==
 
 Carousel Slider v2 now uses Swiper.js instead of Slick. It's more modern, better supported, and works smoother across devices.
 
 = Upgrading from Legacy Carousel =
 
-- Existing legacy (v1) sliders will still work.
-- To upgrade, click on a legacy Carousel Slider block in the editor. Then, in the block's toolbar (the floating bar that appears above the block), click the **block icon (first button on the left)**. From the dropdown, choose **“Transform to Carousel Slider v2”**. Your existing carousel settings will be preserved, but note that the design and HTML markup will change.
+- Existing legacy (v1) Carousel Slider blocks will still work. You can disable them in the admin settings under **Settings → Carousel Slider**.
+- To upgrade, click on a legacy Carousel Slider block in the editor. Then, in the block's toolbar (the floating bar that appears above the block), click the **block icon (first button on the left)**. From the dropdown, choose **"Transform to Carousel Slider v2"**. Your existing carousel settings will be preserved, but note that the design and HTML markup will change.
 - Legacy styles will not apply to v2. You may need to adjust custom styles. 
 
-**Optional: Hide Legacy Blocks**
+**Optional: Re-enable Legacy Blocks**
 
-You can hide legacy blocks from the block inserter and disable v2 upgrade notices in the editor via **Settings → Carousel Slider** in the admin menu.
+You can show/hide legacy blocks from the block inserter and disable v2 upgrade notices via **Settings → Carousel Slider** in the admin menu.
 
 **Note**: Legacy blocks will continue to function, but are no longer supported. It is highly recommended to upgrade to v2 for continued improvements and compatibility.
 
@@ -186,3 +186,7 @@ Fix slider init.
 - Introduced Carousel Slider v2 built on Swiper.js
 - Legacy blocks are still supported but can be upgraded to v2 via block transforms
 - Added settings to hide legacy blocks and legacy upgrade notices
+
+= 2.0.1 =
+- Changed legacy block setting to "Show legacy blocks", disabled by default.
+- CSS update for pagination margin.
