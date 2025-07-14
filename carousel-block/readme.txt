@@ -5,7 +5,7 @@ Tags: carousel, slide, gutenberg, swiper
 Requires at least: 6.1
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 2.0.1
+Stable tag: 2.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,9 +56,9 @@ Carousel Slider v2 now uses Swiper.js instead of Slick. It's more modern, better
 
 = Upgrading from Legacy Carousel =
 
-- Existing legacy (v1) Carousel Slider blocks will still work. You can disable them in the admin settings under **Settings → Carousel Slider**.
-- To upgrade, click on a legacy Carousel Slider block in the editor. Then, in the block's toolbar (the floating bar that appears above the block), click the **block icon (first button on the left)**. From the dropdown, choose **"Transform to Carousel Slider v2"**. Your existing carousel settings will be preserved, but note that the design and HTML markup will change.
-- Legacy styles will not apply to v2. You may need to adjust custom styles. 
+- Existing legacy (v1) Carousel Slider blocks will still work. You can re-enable them in the admin settings under **Settings → Carousel Slider**.
+- To upgrade, click on a legacy Carousel Slider block in the editor. In the block's toolbar (the floating bar that appears above the block), click the **block icon (first button on the left)**. From the dropdown, choose **"Transform to Carousel Slider v2"**. Your existing carousel settings will be preserved, but note that the design and HTML markup will change.
+- Legacy styles will not apply to v2. You may need to adjust custom CSS. 
 
 **Optional: Re-enable Legacy Blocks**
 
@@ -74,7 +74,7 @@ Carousel Slider v2 supports custom styling via CSS variables:
 - `--wp--custom--carousel-block--navigation-size`: Arrow size  
 - `--wp--custom--carousel-block--navigation-sides-offset`: Distance from edge  
 - `--wp--custom--carousel-block--navigation-color`: Arrow color  
-- `--wp--custom--carousel-block--navigation-fullwidth-color`: Arrow color when the carousel is full width
+- `--wp--custom--carousel-block--navigation-alignfull-color`: Arrow color when the carousel is full width
 
 ### Pagination (dots)  
 - `--wp--custom--carousel-block--pagination-top`: Top offset for pagination  
@@ -190,3 +190,8 @@ Fix slider init.
 = 2.0.1 =
 - Changed legacy block setting to "Show legacy blocks", disabled by default.
 - CSS update for pagination margin.
+
+= 2.0.2 =
+- Added custom CSS variable for pagination bullet gap
+- Corrected documentation for navigation color variable
+- Removed unnecessary max-width property blocking inner block widths in editor
