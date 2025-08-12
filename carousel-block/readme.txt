@@ -5,7 +5,7 @@ Tags: carousel, slide, gutenberg, swiper
 Requires at least: 6.1
 Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 2.0.2
+Stable tag: 2.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -195,3 +195,7 @@ Fix slider init.
 - Added custom CSS variable for pagination bullet gap
 - Corrected documentation for navigation color variable
 - Removed unnecessary max-width property blocking inner block widths in editor
+
+= 2.0.3 =
+- Removed block.json from legacy blocks
+- Scroll the inner block list to the far right on slide add

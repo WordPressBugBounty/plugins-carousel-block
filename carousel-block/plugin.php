@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: Carousel Slider Block GIT
+ * Plugin Name: Carousel Slider Block
  * Plugin URI: https://wordpress.org/plugins/carousel-block
  * Description: A responsive carousel slider block for Gutenberg. Add any blocks to slides.
  * Author: Virgiliu Diaconu
  * Author URI: http://virgiliudiaconu.com/
- * Version: 2.0.2
+ * Version: 2.0.3
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
  *
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @var string
  */
-define( 'CB_VERSION', '2.0.2' );
+define( 'CB_VERSION', '2.0.3' );
 
 /**
  * Directory path of this plugin without trailing slash.
