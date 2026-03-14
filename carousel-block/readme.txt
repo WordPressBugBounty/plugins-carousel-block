@@ -3,9 +3,9 @@ Contributors: virgildia
 Donate link: http://virgiliudiaconu.com/
 Tags: carousel, slide, gutenberg, swiper
 Requires at least: 6.1
-Tested up to: 6.8.3
+Tested up to: 6.9.4
 Requires PHP: 7.0
-Stable tag: 2.0.6
+Stable tag: 2.0.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 A responsive modern carousel slider for the Gutenberg block editor that lets you add any blocks to your slides.
 
-🚀 **Carousel Slider Version 2 is here!** Now powered by **Swiper.js** for a smoother, faster, and more modern experience. See below for update instructions.
+🚀 **Carousel Slider Version 2 is here!** Now powered by **Swiper.js** for a smoother, faster, and more modern experience.
 
 = Features =
 
@@ -120,6 +120,13 @@ For example:
 }
 </code></pre>
 
+= Frontend API =
+
+Carousel Slider exposes a small frontend API for integrations with tabs, accordions, modals, or other hidden UI.
+
+- `window.CarouselSliderBlock.init( container )`: Initializes carousel instances inside the given container.
+- `window.CarouselSliderBlock.update( container )`: Updates existing carousel instances inside the given container and initializes any that are not yet initialized.
+
 == Installation ==
 
 1. From your WordPress dashboard go to **Plugins > Add New**.
@@ -149,6 +156,38 @@ Select the Carousel Slider block from the Design category.
 = How do I add a slide to WordPress? =
  
 Select the Carousel Slider block. Click the plus button to add slides to the carousel. 
+
+= How do I add an image carousel in Gutenberg? =
+
+Add the Carousel Slider block from the block inserter and upload images or create slides inside the block. Each slide can contain images, text, or other blocks.
+
+= Can I add multiple carousels on the same page? =
+
+Yes. You can add multiple Carousel Slider blocks to a page or post and each carousel will work independently.
+
+= Can I add images and text inside carousel slides? =
+
+Yes. Each slide can contain images, text, buttons, or other blocks depending on how you want to design your carousel.
+
+= Is the carousel mobile friendly? =
+
+Yes. The carousel is fully responsive and works on mobile phones, tablets, and desktop devices.
+
+= Can I use the carousel in posts and pages? =
+
+Yes. The Carousel Slider block works in both WordPress posts and pages anywhere the block editor is available.
+
+= How can I make the carousel performant in WordPress? =
+
+The Carousel Slider block uses the lightweight Swiper library for fast and smooth performance. For best results, use optimized images and enable lazy loading on any Image blocks inside slides so images load only when needed.
+
+= Why does the plugin use Swiper.js? =
+
+The Carousel Slider block uses the lightweight Swiper.js library because it provides fast, smooth, and responsive sliders. Swiper is widely used, mobile-friendly, and optimized for performance.
+
+= How do I add a slider to WordPress without coding? =
+
+Install the Carousel Slider plugin and add the Carousel Slider block to your page or post using the block editor.
 
 ---
 
@@ -214,8 +253,8 @@ Fix slider init.
 - Added settings to hide legacy blocks and legacy upgrade notices
 
 = 2.0.1 =
-- Changed legacy block setting to "Show legacy blocks", disabled by default.
-- CSS update for pagination margin.
+- Changed legacy block setting to "Show legacy blocks", disabled by default
+- CSS update for pagination margin
 
 = 2.0.2 =
 - Added custom CSS variable for pagination bullet gap
@@ -234,3 +273,9 @@ Fix block insert
 
 = 2.0.6 =
 Additional CSS variables 
+
+= 2.0.7 =
+- Added pauseOnMouseEnter and disableOnInteraction to autoplay settings
+- Simplified the labels in the editor panel
+- Removed "v2" from block titles and added "v1" to legacy blocks
+- Exposed frontend carousel init() and update() APIs for tabs, accordions, and other hidden UI.

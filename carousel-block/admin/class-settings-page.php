@@ -153,9 +153,9 @@ class Settings_Page {
                 <p><strong>New in Version 2:</strong> We've introduced a modern Swiper-based carousel block.</p>
                 <p>Legacy blocks will continue to work, but are no longer recommended.</p>
                 <ul style="list-style: disc; padding-left: 20px;">
-                    <li>To insert new carousels, use the <strong>Carousel Slider v2</strong> block.</li>
-                    <li>To upgrade a legacy block, select it in the editor, then click the block icon (the first button in the toolbar) and choose <strong>"Transform to Carousel Slider v2."</strong></li>
-                    <li><strong>Note:</strong> When transforming a legacy block to Carousel Slider v2, the carousel settings will remain unchanged, but the design and markup will be updated.</li>
+                    <li>To insert new carousels, use the <strong>Carousel Slider</strong> block (legacy blocks are marked <strong>v1</strong>).</li>
+                    <li>To upgrade a legacy block, select it in the editor, then click the block icon (the first button in the toolbar) and choose <strong>"Transform to Carousel Slider."</strong></li>
+                    <li><strong>Note:</strong> When transforming a legacy block to Carousel Slider, the carousel settings will remain unchanged, but the design and markup will be updated.</li>
                 </ul>
                 <p>You can optionally re-enable legacy blocks below.</p>
             </div>

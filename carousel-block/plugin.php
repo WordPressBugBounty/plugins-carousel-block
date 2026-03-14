@@ -5,7 +5,7 @@
  * Description: A responsive carousel slider for the Gutenberg block editor. Add any type of block to your slides.
  * Author: Virgiliu Diaconu
  * Author URI: http://virgiliudiaconu.com/
- * Version: 2.0.6
+ * Version: 2.0.7
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
  *
