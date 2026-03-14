@@ -35,7 +35,7 @@ class Carousel_Legacy {
             'title'         => __( 'Carousel Slider v1', 'cb' ),
             'version'       => '1.0.0',
             'category'      => 'design',
-            'description'   => __( 'Display a carousel with any blocks in the slides.', 'cb' ),
+            'description'   => __( 'Display a carousel using any blocks as slides.', 'cb' ),
             'editor_script' => 'cb-carousel-editor',
             'editor_style'  => 'cb-carousel-editor-style',
             'style'         => 'cb-carousel-style',
