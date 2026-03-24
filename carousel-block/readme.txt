@@ -5,16 +5,16 @@ Tags: carousel, slide, gutenberg, swiper
 Requires at least: 6.1
 Tested up to: 6.9.4
 Requires PHP: 7.0
-Stable tag: 2.0.8
+Stable tag: 2.0.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 == Description ==
 
-A responsive modern carousel slider for the Gutenberg block editor that lets you add any blocks to your slides.
+A responsive modern carousel slider for the Gutenberg block editor that lets you add any blocks to your slides. Easily create sliders for hero sections, testimonials, products, and anything else using Gutenberg blocks.
 
- 🚀 **Carousel Slider Version 2** is built on the modern Swiper.js library for improved performance and compatibility.
+ 🚀 **Carousel Slider Version 2** is built on the modern Swiper.js library for improved performance and better mobile compatibility.
 
 = Features =
 
@@ -33,8 +33,27 @@ A responsive modern carousel slider for the Gutenberg block editor that lets you
  - Dots navigation
  - Infinite loop sliding
  - Autoplay
+ - Pause on hover
+ - Disable on interaction
  - Responsive settings: slides to show and scroll at given screen size
  - RTL
+
+= Advanced Settings =
+
+For dynamic layouts where the slider or its surrounding layout changes after load, such as tabs, accordions, or lazy-loaded content.
+
+ - ResizeObserver
+ - Observer
+ - Observe parent elements
+ - Observe slide children
+
+= Included Patterns =
+
+- Full Width Hero Slider
+- Testimonials Slider
+- Logos Carousel
+
+The final look of these sliders depends on your theme styles. You can also fine-tune the design using custom CSS variables (see below).
 
 == Requirements ==
 
@@ -53,6 +72,8 @@ Click the Carousel Block (the block nesting all the slides) to show the carousel
 = Upgrading from Legacy Carousel =
 
 See the [support topic](https://wordpress.org/support/topic/how-to-update-to-carousel-slider-block-version-2/) for upgrading legacy blocks to Carousel Slider Version 2.
+
+Legacy settings remain available at `/wp-admin/options-general.php?page=cb-carousel-settings` for sites that still need to manage legacy block visibility or legacy warning behavior. The settings page is intentionally hidden from the admin menu and is meant to be accessed directly by URL.
 
 = Customizing v2 Styles =
 
@@ -112,6 +133,8 @@ For example:
 
 Carousel Slider exposes a small frontend API for integrations with tabs, accordions, modals, or other hidden UI.
 
+For some of these dynamic layout cases, the Advanced Settings observer options can also handle updates automatically.
+
 - `window.CarouselSliderBlock.init( container )`: Initializes carousel instances inside the given container.
 - `window.CarouselSliderBlock.update( container )`: Updates existing carousel instances inside the given container and initializes any that are not yet initialized.
 
@@ -127,9 +150,10 @@ If you still need help. visit [WordPress codex](https://codex.wordpress.org/Mana
 
 == Screenshots ==
 
-1. Carousel slider
-2. Add any blocks to the carousel slides
-3. Carousel settings
+1. Add any blocks to the carousel slides 
+2. Carousel slider
+3. Testimonials and logo carousel
+4. Carousel settings
 
 == Frequently Asked Questions ==
  
@@ -169,6 +193,10 @@ Yes. The Carousel Slider block works in both WordPress posts and pages anywhere 
 
 The Carousel Slider block uses the lightweight Swiper library for fast and smooth performance. For best results, use optimized images and enable lazy loading on any Image blocks inside slides so images load only when needed.
 
+= How do I make the slider update inside tabs, accordions, modals, or other dynamic layouts? =
+
+Use the Advanced Settings observer options when the slider or its surrounding layout changes after load. For custom integrations, you can also call `window.CarouselSliderBlock.init( container )` or `window.CarouselSliderBlock.update( container )` after the layout changes.
+
 = Why does the plugin use Swiper.js? =
 
 The Carousel Slider block uses the lightweight Swiper.js library because it provides fast, smooth, and responsive sliders. Swiper is widely used, mobile-friendly, and optimized for performance.
@@ -181,6 +209,12 @@ Install the Carousel Slider plugin and add the Carousel Slider block to your pag
 
 
 == Changelog ==
+
+= 2.0.9 =
+- Added starter carousel patterns for hero, testimonials, and logos
+- Hid the legacy settings page from the admin menu while keeping direct URL access at `/wp-admin/options-general.php?page=cb-carousel-settings`
+- Added advanced Swiper observer settings and updated documentation
+- Increased default vertical spacing for navigation dots
 
 = 2.0.8 =
 - Simplified the labels in the editor panel

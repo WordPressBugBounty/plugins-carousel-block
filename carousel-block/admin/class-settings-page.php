@@ -29,7 +29,9 @@ class Settings_Page {
             return;
         }
 
-        \add_options_page(
+        // Register the page without showing it in the admin menu.
+        \add_submenu_page(
+            null,
             \__( 'Carousel Slider Block Settings', 'cb' ),
             \__( 'Carousel Slider', 'cb' ),
             'manage_options',

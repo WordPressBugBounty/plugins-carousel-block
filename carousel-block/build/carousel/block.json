@@ -74,13 +74,21 @@
         }
       ]
     },
-    "navigationSize": {
-      "type": "number",
-      "default": 22
+    "resizeObserver": {
+      "type": "boolean",
+      "default": false
     },
-    "navigationColor": {
-      "type": "string",
-      "default": "#000"
+    "observer": {
+      "type": "boolean",
+      "default": false
+    },
+    "observeParents": {
+      "type": "boolean",
+      "default": false
+    },
+    "observeSlideChildren": {
+      "type": "boolean",
+      "default": false
     }
   },
   "supports": {
