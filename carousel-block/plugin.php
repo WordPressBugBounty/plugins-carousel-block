@@ -5,7 +5,7 @@
  * Description: A responsive carousel slider for the Gutenberg block editor. Add any type of block to your slides.
  * Author: Virgiliu Diaconu
  * Author URI: http://virgiliudiaconu.com/
- * Version: 2.0.10
+ * Version: 2.1.0
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
  *
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @var string
  */
-define( 'CB_VERSION', '2.0.10' );
+define( 'CB_VERSION', '2.1.0' );
 
 /**
  * Directory path of this plugin without trailing slash.
@@ -53,13 +53,12 @@ require_once CB_PLUGIN_DIR . '/admin/class-block-filters.php';
 require_once CB_PLUGIN_DIR . '/admin/class-settings-utils.php';
 
 // Load block patterns.
-require_once CB_PLUGIN_DIR . '/block-patterns/class-patterns.php';
+require_once CB_PLUGIN_DIR . '/patterns/class-patterns.php';
 
 use CarouselSliderBlock\Blocks\Carousel_Legacy;
 use CarouselSliderBlock\Blocks\Carousel;
 use CarouselSliderBlock\Admin\Settings_Page;
 use CarouselSliderBlock\Admin\Block_Filters;
-use CarouselSliderBlock\Admin\Settings_Utils;
 use CarouselSliderBlock\Patterns\Patterns;
 
 /**

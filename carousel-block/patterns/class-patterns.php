@@ -39,7 +39,7 @@ class Patterns {
 			[
 				'title'         => __( 'Full Width Hero Slider', 'cb' ),
 				'description'   => __( 'A full-width hero slider with cover backgrounds, headings, copy, and call-to-action buttons.', 'cb' ),
-				'categories'    => [ 'carousel-slider-block', 'banner' ],
+				'categories'    => [ 'carousel-slider-block' ],
 				'keywords'      => [ 'hero', 'cover', 'cta', 'slider' ],
 				'viewportWidth' => 1440,
 				'blockTypes'    => [ 'cb/carousel-v2' ],
@@ -50,8 +50,8 @@ class Patterns {
 			'testimonials-slider',
 			[
 				'title'         => __( 'Testimonials Slider', 'cb' ),
-				'description'   => __( 'A testimonial carousel with quote cards, reviewer names, and roles.', 'cb' ),
-				'categories'    => [ 'carousel-slider-block', 'testimonials' ],
+				'description'   => __( 'A testimonial slider with quote cards, reviewer names, and roles.', 'cb' ),
+				'categories'    => [ 'carousel-slider-block' ],
 				'keywords'      => [ 'testimonial', 'quote', 'review', 'slider' ],
 				'viewportWidth' => 1200,
 				'blockTypes'    => [ 'cb/carousel-v2' ],
@@ -63,7 +63,7 @@ class Patterns {
 			[
 				'title'         => __( 'Logos Carousel', 'cb' ),
 				'description'   => __( 'A looping sponsor and partner logo carousel.', 'cb' ),
-				'categories'    => [ 'carousel-slider-block', 'gallery' ],
+				'categories'    => [ 'carousel-slider-block' ],
 				'keywords'      => [ 'logos', 'sponsors', 'partners', 'brands' ],
 				'viewportWidth' => 1280,
 				'blockTypes'    => [ 'cb/carousel-v2' ],

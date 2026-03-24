@@ -5,7 +5,7 @@ Tags: carousel, slide, gutenberg, swiper
 Requires at least: 6.1
 Tested up to: 6.9.4
 Requires PHP: 7.0
-Stable tag: 2.0.10
+Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -73,7 +73,7 @@ Click the Carousel Block (the block nesting all the slides) to show the carousel
 
 See the [support topic](https://wordpress.org/support/topic/how-to-update-to-carousel-slider-block-version-2/) for upgrading legacy blocks to Carousel Slider Version 2.
 
-Legacy settings remain available at `/wp-admin/options-general.php?page=cb-carousel-settings` for sites that still need to manage legacy block visibility or legacy warning behavior. The settings page is intentionally hidden from the admin menu and is meant to be accessed directly by URL.
+Legacy settings remain available at `/wp-admin/options-general.php?page=cb-carousel-settings`. The page is hidden from the admin menu and can be accessed directly by URL.
 
 = Customizing v2 Styles =
 
@@ -210,8 +210,13 @@ Install the Carousel Slider plugin and add the Carousel Slider block to your pag
 
 == Changelog ==
 
-= 2.0.9 =
+= 2.1.0 =
 - Added starter carousel patterns for hero, testimonials, and logos
+
+= 2.0.10 =
+- Stability fix
+
+= 2.0.9 =
 - Hid the legacy settings page from the admin menu while keeping direct URL access at `/wp-admin/options-general.php?page=cb-carousel-settings`
 - Added advanced Swiper observer settings and updated documentation
 - Increased default vertical spacing for navigation dots
