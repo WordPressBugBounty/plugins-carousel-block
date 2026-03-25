@@ -4,8 +4,8 @@ Donate link: http://virgiliudiaconu.com/
 Tags: carousel, slide, gutenberg, swiper
 Requires at least: 6.1
 Tested up to: 6.9.4
-Requires PHP: 7.0
-Stable tag: 2.1.0
+Requires PHP: 7.0+
+Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 A responsive modern carousel slider for the Gutenberg block editor that lets you add any blocks to your slides. Easily create sliders for hero sections, testimonials, products, and anything else using Gutenberg blocks.
 
  🚀 **Carousel Slider Version 2** is built on the modern Swiper.js library for improved performance and better mobile compatibility.
+
+Plugin site: <a href="https://www.carouselblock.com/">carouselblock.com</a>
 
 = Features =
 
@@ -61,6 +63,8 @@ PHP 5.6+ is recommended, WordPress 5.8+, with Gutenberg active.
 
 == Documentation ==
 
+Full documentation: <a href="https://www.carouselblock.com/docs">carouselblock.com/docs</a>
+
 Select the Carousel Slider block from the Design category. Click the + button located at the end of the carousel to add slides. Add any block within the slides. Use the horizontal scrollbar to preview the slides in the editor.
 
 You can reorder the slides by using the left and right arrow buttons in the toolbar.
@@ -78,6 +82,8 @@ Legacy settings remain available at `/wp-admin/options-general.php?page=cb-carou
 = Customizing v2 Styles =
 
 Carousel Slider v2 supports custom styling via CSS variables:
+
+Styling documentation: <a href="https://www.carouselblock.com/docs?doc=styling">carouselblock.com/docs?doc=styling</a>
 
 ### Navigation
 - `--wp--custom--carousel-block--navigation-size`: Arrow icon size  
@@ -151,9 +157,10 @@ If you still need help. visit [WordPress codex](https://codex.wordpress.org/Mana
 == Screenshots ==
 
 1. Add any blocks to the carousel slides 
-2. Carousel slider
+2. Hero sliders
 3. Testimonials and logo carousel
 4. Carousel settings
+5. Carousel editor
 
 == Frequently Asked Questions ==
  
@@ -207,8 +214,10 @@ Install the Carousel Slider plugin and add the Carousel Slider block to your pag
 
 ---
 
-
 == Changelog ==
+
+= 2.1.1 =
+- Improved PHP 8+ compatibility for the hidden settings page
 
 = 2.1.0 =
 - Added starter carousel patterns for hero, testimonials, and logos

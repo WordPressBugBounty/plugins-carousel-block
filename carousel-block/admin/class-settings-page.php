@@ -12,13 +12,21 @@ if ( ! \defined( 'ABSPATH' ) ) {
  * Handles the admin settings page for the Carousel Block plugin.
  */
 class Settings_Page {
+    /**
+     * Admin page hook suffix.
+     *
+     * @var string|null
+     */
+    private static $page_hook = null;
 
     /**
      * Initialize settings page.
      */
     public static function init() {
         add_action( 'admin_menu', [ self::class, 'add_settings_menu' ] );
+        add_action( 'admin_menu', [ self::class, 'hide_settings_menu' ], 999 );
         add_action( 'admin_init', [ self::class, 'initialize_settings' ] );
+        add_action( 'current_screen', [ self::class, 'set_screen_title' ] );
     }
 
     /**
@@ -29,15 +37,35 @@ class Settings_Page {
             return;
         }
 
-        // Register the page without showing it in the admin menu.
-        \add_submenu_page(
-            null,
+        self::$page_hook = \add_options_page(
             \__( 'Carousel Slider Block Settings', 'cb' ),
             \__( 'Carousel Slider', 'cb' ),
             'manage_options',
             'cb-carousel-settings',
             [ self::class, 'render_settings_page' ]
         );
+    }
+
+    /**
+     * Hide the settings page from the admin menu while keeping the URL active.
+     */
+    public static function hide_settings_menu() {
+        \remove_submenu_page( 'options-general.php', 'cb-carousel-settings' );
+    }
+
+    /**
+     * Restore the admin page title for the hidden settings screen.
+     *
+     * @param \WP_Screen $screen Current screen object.
+     */
+    public static function set_screen_title( $screen ) {
+        if ( ! $screen || empty( self::$page_hook ) ) {
+            return;
+        }
+
+        if ( $screen->id === self::$page_hook ) {
+            $GLOBALS['title'] = \__( 'Carousel Slider Block Settings', 'cb' );
+        }
     }
 
     /**
