@@ -13,20 +13,11 @@ if ( ! \defined( 'ABSPATH' ) ) {
  */
 class Settings_Page {
     /**
-     * Admin page hook suffix.
-     *
-     * @var string|null
-     */
-    private static $page_hook = null;
-
-    /**
      * Initialize settings page.
      */
     public static function init() {
         add_action( 'admin_menu', [ self::class, 'add_settings_menu' ] );
-        add_action( 'admin_menu', [ self::class, 'hide_settings_menu' ], 999 );
         add_action( 'admin_init', [ self::class, 'initialize_settings' ] );
-        add_action( 'current_screen', [ self::class, 'set_screen_title' ] );
     }
 
     /**
@@ -37,35 +28,13 @@ class Settings_Page {
             return;
         }
 
-        self::$page_hook = \add_options_page(
+        \add_options_page(
             \__( 'Carousel Slider Block Settings', 'cb' ),
             \__( 'Carousel Slider', 'cb' ),
             'manage_options',
             'cb-carousel-settings',
             [ self::class, 'render_settings_page' ]
         );
-    }
-
-    /**
-     * Hide the settings page from the admin menu while keeping the URL active.
-     */
-    public static function hide_settings_menu() {
-        \remove_submenu_page( 'options-general.php', 'cb-carousel-settings' );
-    }
-
-    /**
-     * Restore the admin page title for the hidden settings screen.
-     *
-     * @param \WP_Screen $screen Current screen object.
-     */
-    public static function set_screen_title( $screen ) {
-        if ( ! $screen || empty( self::$page_hook ) ) {
-            return;
-        }
-
-        if ( $screen->id === self::$page_hook ) {
-            $GLOBALS['title'] = \__( 'Carousel Slider Block Settings', 'cb' );
-        }
     }
 
     /**
@@ -84,6 +53,7 @@ class Settings_Page {
         $options = \get_option( 'cb_carousel_settings' );
         self::add_settings_field( 'show_legacy_blocks', \__( 'Show Old Carousel Blocks', 'cb' ), $options );
         self::add_settings_field( 'hide_legacy_notice', __( 'Hide Legacy Warning Notice', 'cb' ), $options );
+        self::add_settings_field( 'use_full_swiper_bundle', __( 'Load Full Swiper Bundle', 'cb' ), $options );
     }
 
     /**
@@ -101,6 +71,10 @@ class Settings_Page {
 
         $sanitized_input['hide_legacy_notice'] = isset( $input['hide_legacy_notice'] )
             ? \filter_var( $input['hide_legacy_notice'], \FILTER_VALIDATE_BOOLEAN )
+            : false;
+
+        $sanitized_input['use_full_swiper_bundle'] = isset( $input['use_full_swiper_bundle'] )
+            ? \filter_var( $input['use_full_swiper_bundle'], \FILTER_VALIDATE_BOOLEAN )
             : false;
 
         return $sanitized_input;
@@ -162,6 +136,10 @@ class Settings_Page {
 
         if ( $setting_id === 'hide_legacy_notice' ) {
             echo __( 'Hide the notice about legacy Carousel Slider blocks in the editor.', 'cb' );
+        }
+
+        if ( $setting_id === 'use_full_swiper_bundle' ) {
+            echo __( 'Load the full Swiper JS and CSS bundle instead of the smaller custom build.', 'cb' );
         }
 
         echo '</label>';

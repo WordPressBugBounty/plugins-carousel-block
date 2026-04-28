@@ -5,7 +5,7 @@ Tags: carousel, slide, gutenberg, swiper
 Requires at least: 6.1
 Tested up to: 6.9.4
 Requires PHP: 7.0+
-Stable tag: 2.1.1
+Stable tag: 2.1.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -24,6 +24,7 @@ Plugin site: <a href="https://www.carouselblock.com/">carouselblock.com</a>
  - Add any blocks to the slides
  - Preview the carousel in the editor
  - Responsive and touch enabled
+ - Developer friendly: supports CSS variables & theme.json
 
 = Settings =
 
@@ -48,6 +49,12 @@ For dynamic layouts where the slider or its surrounding layout changes after loa
  - Observer
  - Observe parent elements
  - Observe slide children
+
+= Plugin Settings =
+
+Plugin settings are available from Settings > Carousel Slider in the WordPress admin.
+
+Available options include showing legacy carousel blocks, hiding the legacy warning notice, and loading the full Swiper bundle instead of the default custom Swiper build.
 
 = Included Patterns =
 
@@ -77,15 +84,15 @@ Click the Carousel Block (the block nesting all the slides) to show the carousel
 
 See the [support topic](https://wordpress.org/support/topic/how-to-update-to-carousel-slider-block-version-2/) for upgrading legacy blocks to Carousel Slider Version 2.
 
-Legacy settings remain available at `/wp-admin/options-general.php?page=cb-carousel-settings`. The page is hidden from the admin menu and can be accessed directly by URL.
+Carousel Slider settings are available from Settings > Carousel Slider in the WordPress admin.
 
-= Customizing v2 Styles =
+### Customizing Styles
 
 Carousel Slider v2 supports custom styling via CSS variables:
 
 Styling documentation: <a href="https://www.carouselblock.com/docs?doc=styling">carouselblock.com/docs?doc=styling</a>
 
-### Navigation
+#### Navigation
 - `--wp--custom--carousel-block--navigation-size`: Arrow icon size  
 - `--wp--custom--carousel-block--navigation-sides-offset`: Distance from edge  
 - `--wp--custom--carousel-block--navigation-color`: Arrow color  
@@ -94,7 +101,7 @@ Styling documentation: <a href="https://www.carouselblock.com/docs?doc=styling">
 
 ---
 
-### Pagination (dots)
+#### Pagination (dots)
 - `--wp--custom--carousel-block--pagination-top`: Top offset  
 - `--wp--custom--carousel-block--pagination-bottom`: Bottom offset  
 - `--wp--custom--carousel-block--pagination-bullet-size`: Bullet size  
@@ -109,7 +116,7 @@ Styling documentation: <a href="https://www.carouselblock.com/docs?doc=styling">
 
 ---
 
-### Block Spacing
+#### Block Spacing
 - `--wp--custom--carousel-block--image-margin-top`: Top margin for image blocks  
 - `--wp--custom--carousel-block--image-margin-bottom`: Bottom margin for image blocks  
 - `--wp--custom--carousel-block--cover-margin-top`: Top margin for cover blocks  
@@ -216,8 +223,13 @@ Install the Carousel Slider plugin and add the Carousel Slider block to your pag
 
 == Changelog ==
 
+= 2.1.2 =
+- Reduced default Swiper assets with a custom build and added a full bundle fallback setting.
+- Restored the Carousel Slider settings page in the WordPress Settings menu.
+- Improved editor appender sizing in the carousel block.
+
 = 2.1.1 =
-- Improved PHP 8+ compatibility for the hidden settings page
+- Improved PHP 8+ compatibility for the settings page
 
 = 2.1.0 =
 - Added starter carousel patterns for hero, testimonials, and logos
@@ -226,6 +238,7 @@ Install the Carousel Slider plugin and add the Carousel Slider block to your pag
 - Stability fix
 
 = 2.0.9 =
+- Added Carousel Slider settings for legacy block visibility
 - Hid the legacy settings page from the admin menu while keeping direct URL access at `/wp-admin/options-general.php?page=cb-carousel-settings`
 - Added advanced Swiper observer settings and updated documentation
 - Increased default vertical spacing for navigation dots
