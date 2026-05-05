@@ -5,7 +5,7 @@ Tags: carousel, slide, gutenberg, swiper
 Requires at least: 6.1
 Tested up to: 6.9.4
 Requires PHP: 7.0+
-Stable tag: 2.1.2
+Stable tag: 2.1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -222,6 +222,9 @@ Install the Carousel Slider plugin and add the Carousel Slider block to your pag
 ---
 
 == Changelog ==
+
+= 2.1.3 =
+- Fixed Swiper responsive breakpoint updates by ensuring the block's ResizeObserver setting is passed explicitly and clarified the ResizeObserver help text to recommend leaving it off for normal responsive breakpoints.
 
 = 2.1.2 =
 - Reduced default Swiper assets with a custom build and added a full bundle fallback setting.
