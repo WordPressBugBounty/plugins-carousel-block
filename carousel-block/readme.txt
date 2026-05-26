@@ -3,9 +3,9 @@ Contributors: virgildia
 Donate link: http://virgiliudiaconu.com/
 Tags: carousel, slide, gutenberg, swiper
 Requires at least: 6.1
-Tested up to: 6.9.4
+Tested up to: 7.0
 Requires PHP: 7.0+
-Stable tag: 2.1.3
+Stable tag: 2.1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,7 @@ Plugin site: <a href="https://www.carouselblock.com/">carouselblock.com</a>
  - Preview the carousel in the editor
  - Responsive and touch enabled
  - Developer friendly: supports CSS variables & theme.json
+ - Accessibility-ready with keyboard navigation and ARIA labels
 
 = Settings =
 
@@ -222,6 +223,10 @@ Install the Carousel Slider plugin and add the Carousel Slider block to your pag
 ---
 
 == Changelog ==
+
+= 2.1.4 =
+- Added Swiper a11y support to the new bundled assets.
+- Tested on WP 7.0
 
 = 2.1.3 =
 - Fixed Swiper responsive breakpoint updates by ensuring the block's ResizeObserver setting is passed explicitly and clarified the ResizeObserver help text to recommend leaving it off for normal responsive breakpoints.
